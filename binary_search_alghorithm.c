@@ -3,21 +3,18 @@
 
 int binarysearch(int array[],int num,int h,int l, int m)
 {
+    while (l < h)
+    {
 
-while (l < h){
+        m = (l + h-1)/ 2;
 
-    m = (l + h-1)/ 2;
-    
-    if (num == array[m])       return m;
+        if (num == array[m])       return m;
 
-    else if (array[m] < num)      l = m +1;
-    
-    else h = m;
+        else if (array[m] < num)      l = m +1;
 
-}
-
+        else h = m;
+    }
 return -1;
-
 }
 
 
